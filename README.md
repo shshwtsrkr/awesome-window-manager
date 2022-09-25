@@ -16,5 +16,5 @@ For an error-free experience, you may have the following software installed :-
 5. Ranger (CLI File manager)
 6. PCManFM (GUI File manager)
 
-Credits :-
+Credits -
 Special thanks to justsaumit for helping with the battery widget (using a very simple and minimal approach)
