@@ -8,7 +8,7 @@ Some unique features include :-
 3. Sound          (displayed in the bar)
 
 # Software dependencies
-For an error-free experience, one may have the following software installed :-
+For an error-free experience, you may have the following software installed :-
 1. Brave browser
 2. Visual Studio Code
 3. Neovim
