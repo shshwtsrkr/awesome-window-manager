@@ -46,8 +46,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-browser="brave"
-files = "kitty -e ranger"
+browser= "brave"
+files = "nemo"
 geditor="code"
 terminal = "kitty"
 network = "firefox"
@@ -60,7 +60,6 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
-
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     --awful.layout.suit.floating,
@@ -110,7 +109,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 myBattery = awful.widget.watch('/home/st/.scripts/battery', 1)
-myVolume = awful.widget.watch('/home/st/.scripts/sound', 1)
+myVolume = awful.widget.watch('/home/st/.scripts/sound', 0.5)
 myBright = awful.widget.watch('light', 1)
 
 local sep = wibox.widget.textbox("  ")
@@ -165,7 +164,7 @@ local function set_wallpaper(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        gears.wallpaper.maximized("/home/st/Pictures/wallpapers/hills.png", s, true)
+        gears.wallpaper.maximized("/home/st/Pictures/wallp/firewatch_blue.jpg", s, true)
     end
 end
 
@@ -605,10 +604,10 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-client.connect_signal("manage", function(c)
-    c.shape = function(cr, w, h)
-        gears.shape.rounded_rect(cr, w, h, 6)
-    end
-end)
+--client.connect_signal("manage", function(c)
+  --  c.shape = function(cr, w, h)
+    --    gears.shape.rounded_rect(cr, w, h, 6)
+    --end
+--end)
 
 beautiful.useless_gap = 2
